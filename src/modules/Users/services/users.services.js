@@ -303,6 +303,7 @@ export const deleteuser = asyncHandler(async (req, res) => {
   const deleted = await user.findByIdAndDelete(id, { session });
   if (!deleted) throw new Error(`user not found`, { cause: 404 });
   await message.deleteMany({ reciverId: id }, { session });
+  await notification.deleteMany({ userId: id }, { session });
   await session.commitTransaction();
   const keys = await redis.keys(`refreshToken:${id}:*`);
   if (keys.length) await redis.del(keys);
