@@ -17,10 +17,13 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "http://localhost:4200",
+    origin: process.env.FRONT,
   })
 );
 
+app.get("/", (req, res) => {
+  res.send("مرحبا 👋 Welcome to Sarahah");
+});
 
 app.use("/users", user_router);
 app.use("/", message_router);
