@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "f3ba23b7-6863-4ec7-8b89-f36f6595f783",
+		"name": "Sarahah",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" alt=\"\" height=\"1530\" width=\"2162\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "44460916"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "password",
+					"item": [
+						{
+							"name": "reset password Req",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllMmQ1YmYxNzgxZjU0ZTY4MzFiYyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY0MTM2LCJleHAiOjE3NTU5NjU5MzZ9.Ctfku9zo2kmrdp2KjDiEXW42vGaCfVAK1HM8H1wX62I",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/users/editpasswordreq"
+							},
+							"response": []
+						},
+						{
+							"name": "edit password",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJpZCI6IjY4YTllMmQ1YmYxNzgxZjU0ZTY4MzFiYyIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY0MTM2LCJleHAiOjE3NTU5NjU5MzZ9",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"newPassword\":\"mo.awad4444\",\n    \"OTP\":\"oqx7dc\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3000/users/passwordconfirm"
+							},
+							"response": []
+						},
+						{
+							"name": "resend OTP",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sginup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"firstName\": \"user_1\",\n\t\"lastName\": \"_user1\",\n    \"email\":\"maha.hosny180@gmail.com\",\n    \"password\":\"Mo.awad4444\",\n    \"phone\":\"01016624425\",\n    \"age\":20,\n    \"gender\":\"female\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "signup gmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "aut",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"idToken\":\"eyJhbGciOiJSUzI1NiIsImtpZCI6IjE0OTljMTU0Y2NjOGEyNWUyNGQ4ZGU4YjFhOWY4NDVhZWZiNmYzY2EiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIyNTYyMzM5NTkwNzcta3RwaWU1Zjg0dGM2Z2l1MmI0dTZxdWhudGhhYzRwbGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiIyNTYyMzM5NTkwNzcta3RwaWU1Zjg0dGM2Z2l1MmI0dTZxdWhudGhhYzRwbGEuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJzdWIiOiIxMTIzMDkyOTI1ODU3NjI2ODM2NDAiLCJlbWFpbCI6Im1vaGFtZWRhaG1lZGF3YWQxODBAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsIm5iZiI6MTc1NTk2MzgxNSwibmFtZSI6Im1vaGFtZWQgQXdhZCIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS9BQ2c4b2NKZ1d6QzlFQm1WNHdNOUhXLXVaLWJidDFpanEwa3BlV0h4Y1JnQ0E5S2dIa3JvcmpGaz1zOTYtYyIsImdpdmVuX25hbWUiOiJtb2hhbWVkIiwiZmFtaWx5X25hbWUiOiJBd2FkIiwiaWF0IjoxNzU1OTY0MTE1LCJleHAiOjE3NTU5Njc3MTUsImp0aSI6ImM4ZDRiODY3OGM4MmU1ZTA1YTQyY2I2YjI1ZTA3NTkzYjMyY2Q4MjMifQ.VieTGuteZtV07C-I6zesPu27xVewyjYL99qK8mRcd7bJxlsTjUidgFNm2QJDnhCTjXAPPz5E78jkK2RqQCVVVeV2zgU0LyE7Ep2r1lpd8MmgYrpTeWgXRsNF_NJhFaebFNpRe7q85spEnjnpGUwtCe5TZwgUT1CGFmuHLPCKmjUgqD-m885P05IIVpocUBlOdKUZdNqYE7x4BS9fogVUEjqTiC4PLZy_xYLhUULrVTSt-Cf1lBwdD-rwWSJOcOp0mNufzuvhV8iH2GCrpCrJSZvBJ1rF8AotZkItKJEiPqZCZeifi-D_SaBb1LUa8t0e_AJnXB5ejtAWOVF0e610wA\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/signup"
+					},
+					"response": []
+				},
+				{
+					"name": "confirm otp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"mohamedahmedawad180@gmail.com\",\n    \"OTP\":\"q8xss1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/confirmotp"
+					},
+					"response": []
+				},
+				{
+					"name": "resend OTP",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"mohamedahmedawad180@gmail.com\",\n    \"OTP\":\"qceacc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/users/resendOTP?email=maha.hosny180@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"resendOTP"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "maha.hosny180@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "aut",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"maha.hosny180@gmail.com\",\n    \"password\":\"Mo.awad4444\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/login"
+					},
+					"response": []
+				},
+				{
+					"name": "refresh token",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "aut",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"user1@gmail.com\",\n    \"password\":\"12345678\"\n}"
+						},
+						"url": "http://localhost:3000/users/search/689890bb82dc9754068eb06f"
+					},
+					"response": []
+				},
+				{
+					"name": "user profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTFmZTgwMDBmNjgzOTQ4MGI1ZDFmYiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1NDQ3Nzg5LCJleHAiOjE3NTU0NDk1ODl9.9TbWb8Nkf8x25_3QB2e1QX7VzFeWVEc6p__U7jd0Bcw",
+								"type": "text"
+							}
+						],
+						"url": "http://localhost:3000/users/profile"
+					},
+					"response": []
+				},
+				{
+					"name": "update profile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1vaGFtZWQwNTBAZ21haWwuY29tIiwiaWQiOiI2ODdlYjM5MDY1MzU4OGMzNjc4ZGQ2YzEiLCJyb2xlIjoidXNlciIsImlhdCI6MTc1MzIyMjg1MywiZXhwIjoxNzUzODI3NjUzfQ.RlJywcfQfHmve32-sUKEIhpTV_wh7IiH4tkLvqomRBk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"lastName\":\"Awad\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/users/updateprofile"
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get users",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OGI3MWYyNGU4MTJmYjAzM2YyMWRlZSIsImlzQWRtaW4iOnRydWUsImlhdCI6MTc1Mzk3MjcxNSwiZXhwIjoxNzUzOTc0NTE1fQ.YDScRAg1nP9s4S7_ASIPpraDL3k61fFX4ZISbJTulgU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n    \"name\": \"User6\",\r\n    \"user_name\": \"user_6\",\r\n    \"email\": \"user6@example.com\",\r\n    \"password\": \"password123\",\r\n    \"isAdmin\": false\r\n  }"
+						},
+						"url": "http://localhost:3000/users/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "notification",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllNDlhNmRhZDQ3ZTE0NjU2ZjAxOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY3MTE3LCJleHAiOjE3NTU5Njg5MTd9.SjJV77G0gQiyMPkqgNGWIpEvR0r9aGKcosifSYfEAOc",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}users/notifications"
+					},
+					"response": []
+				},
+				{
+					"name": "logout all devices",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllNDlhNmRhZDQ3ZTE0NjU2ZjAxOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY1MjA1LCJleHAiOjE3NTU5NjcwMDV9.BjsiELoJ-4Mffy3StgzK8ctjchtJ6qfXBxXDyRQiJ7I",
+								"type": "text"
+							}
+						],
+						"url": "{{base_url}}users/logoutAlldevices"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "message",
+			"item": [
+				{
+					"name": "send message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4OWI0ODI1YWRhMmFjYTVlNWJkZDNiMSIsImlhdCI6MTc1NTAxMjIzNSwiZXhwIjoxNzU1MDE0MDM1fQ.cEK-utD5BsMlFP0Hd6jhnS5Ikizf7cK49Y00CRz8XwA",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"content\":\"hii\",",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/messages/send/689b5b936bb6c57a47a55585"
+					},
+					"response": []
+				},
+				{
+					"name": "reply message",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllNDlhNmRhZDQ3ZTE0NjU2ZjAxOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY3MTE3LCJleHAiOjE3NTU5Njg5MTd9.SjJV77G0gQiyMPkqgNGWIpEvR0r9aGKcosifSYfEAOc",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"content\":\"send again\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3000/reply/68a9ed860fd903e382bf44d4"
+					},
+					"response": []
+				},
+				{
+					"name": "user messages",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		}
+	]
+}
