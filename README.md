@@ -181,4 +181,9 @@ npm run dev
 * JSON Schemas لكل Route (Request/Response).
 
 ---
+🚀 Deployment:
+
+
+
+المشروع مستضاف حاليًا على EvenNode،  عبر :http://sarahah.eu-4.evennode.com/
 
