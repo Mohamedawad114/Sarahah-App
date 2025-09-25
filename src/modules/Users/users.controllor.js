@@ -60,11 +60,3 @@ router.delete("/logoutAlldevices", verifyToken, user_serv.logoutAllDevices);
 router.get("/list", verifyToken, validationAdmin, user_serv.gertusers);
 
 export default router;
-/*
-  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllNDlhNmRhZDQ3ZTE0NjU2ZjAxOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY0ODgyLCJleHAiOjE3NTU5NjY2ODJ9.KAEPJMBfFDSwOrY5t4lWGD7tAMMEsWWOik9El9bKIfA
-  
-  
-  
-  
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YTllNDlhNmRhZDQ3ZTE0NjU2ZjAxOSIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU1OTY1MjA1LCJleHAiOjE3NTU5NjcwMDV9.BjsiELoJ-4Mffy3StgzK8ctjchtJ6qfXBxXDyRQiJ7I
-  */

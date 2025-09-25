@@ -1,7 +1,7 @@
 import multer from "multer";
 import { v2 as cloudinary } from "cloudinary";
 
-export const cloudFileUpload = multer({ storage: multer.diskStorage({}) });
+export const cloudFileUpload = multer({storage: multer.diskStorage({})});
 
 export const cloud = () => {
   cloudinary.config({

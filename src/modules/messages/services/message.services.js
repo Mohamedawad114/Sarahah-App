@@ -12,7 +12,7 @@ export const sendmessage = asyncHandler(async (req, res) => {
   const Message = new message({
     content,
     reciverId,
-    senderId:req.user.id
+    senderId: req.user.id,
   });
   await Message.save();
   await notification.create({ userId: reciverId, messageId: Message._id });
@@ -44,7 +44,10 @@ export const userMessages = asyncHandler(async (req, res) => {
   const id = req.user.id;
   const User = await user.findById(id);
   if (!User) return res.status(404).json({ message: `User not found` });
-  const Messages = await message.find({ reciverId: id }, { senderId: 0 ,reciverId:0});
+  const Messages = await message.find(
+    { reciverId: id },
+    { senderId: 0, reciverId: 0 }
+  );
   if (Messages.length > 0) {
     return res.status(200).json({ Messages });
   }

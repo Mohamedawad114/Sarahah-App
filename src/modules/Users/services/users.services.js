@@ -198,13 +198,18 @@ export const Notifications = asyncHandler(async (req, res) => {
 export const updateuser = asyncHandler(async (req, res) => {
   const id = req.user.id;
   const { firstName, lastName, email, phone } = req.body;
-  if (await user.findOne({ email: email }))
-    throw new Error(`email already existed`, { cause: 409 });
+  if (email) {
+    const valid_email = await user.findOne({ email: email });
+    if (valid_email) throw new Error(`email already existed`, { cause: 409 });
+  }
+  if (phone) {
+    phone = encrypt(phone);
+  }
   const findUser = await user.findByIdAndUpdate(id, {
     firstName,
     lastName,
     email,
-    phone: encrypt(phone),
+    phone: phone,
   });
   if (!findUser) throw new Error(`user not found`, { cause: 404 });
   return res.status(200).json({ message: `profile updated` });
